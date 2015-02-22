@@ -115,77 +115,222 @@ tBodyGyroMean
 tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
-====================================================================================++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ====================================================================================
 
-The output tidy file from the run_analysis.R script contains data that is summarized by subject and activity. There is one row in the file for each activity for each subject. All of the data columns are an average of multiple observations for that activity and person group.
+tidy_file.txt
 
-The fields in the file are
- [1] "subject"  -  the number of the subject 1 - 30                 
- [2] "activity"  -  The description of activity measured - 6 activity per person    
- [3] "tBodyAccMeanX"           
+The output tidy file from the run_analysis.R script contains data that is summarized by subject and activity. There is one row in the file for each activity for each subject. All of the data columns are an average of multiple observations for that activity and person group. Only the calculated mean and standard deviation fields from the input files are used.
+
+tidy_file.txt is a text file with comma seperated values. The first line of the file contains a descriptive header with the field/column names
+
+The fields in the file are:
+ [1] "subject"  -  the number of the subject 1 - 30
+                
+ [2] "activity"  -  The description of activity measured
+		 - 6 different activities were measured per person 
+  			Number   Description
+     			1        WALKING
+     			2        WALKING_UPSTAIRS
+     			3        WALKING_DOWNSTAIRS
+     			4        SITTING
+     			5        STANDING
+     			6        LAYING
+
+ [3] "tBodyAccMeanX" 
+	- Mean value of the time based body acceleration along the X axis
+   
  [4] "tBodyAccMeanY"           
+	- Mean value of the time based body acceleration along the Y axis
+      
  [5] "tBodyAccMeanZ"           
+	- Mean value of the time based body acceleration along the Z axis
+   
  [6] "tBodyAccStdX"            
+	- Standard deviation of the time based body acceleration along the X axis
+
  [7] "tBodyAccStdY"            
+	- Standard deviation of the time based body acceleration along the Y axis
+
  [8] "tBodyAccStdZ"            
+	- Standard deviation of the time based body acceleration along the Z axis
+
  [9] "tGravityAccMeanX"        
+	- Mean value of the time based gravity acceleration along the X axis
+   
 [10] "tGravityAccMeanY"        
+	- Mean value of the time based gravity acceleration along the Y axis
+
 [11] "tGravityAccMeanZ"        
+	- Mean value of the time based gravity acceleration along the Z axis
+  
 [12] "tGravityAccStdX"         
+	- Standard deviation of the time based gravity acceleration along the X axis
+
 [13] "tGravityAccStdY"         
+	- Standard deviation of the time based gravity acceleration along the Y axis
+
 [14] "tGravityAccStdZ"         
+	- Standard deviation of the time based gravity acceleration along the Z axis
+
 [15] "tBodyAccJerkMeanX"       
+	- Mean value of the time based body acceleration jerk along the X axis
+
 [16] "tBodyAccJerkMeanY"       
+	- Mean value of the time based body acceleration jerk along the Y axis
+
 [17] "tBodyAccJerkMeanZ"       
+	- Mean value of the time based body acceleration jerk along the Z axis
+
 [18] "tBodyAccJerkStdX"        
+	- Standard deviation of the time based body acceleration jerk along the X axis
+
 [19] "tBodyAccJerkStdY"        
+	- Standard deviation of the time based body acceleration jerk along the Y axis
+
 [20] "tBodyAccJerkStdZ"        
+	- Standard deviation of the time based body acceleration jerk along the Z axis
+
 [21] "tBodyGyroMeanX"          
+	- Mean value of the time based body gyro measurement along the X axis
+
 [22] "tBodyGyroMeanY"          
+	- Mean value of the time based body gyro measurement along the Y axis
+
 [23] "tBodyGyroMeanZ"          
+	- Mean value of the time based body gyro measurement along the Z axis
+
 [24] "tBodyGyroStdX"           
+	- Standard deviation of the time based body gyro measurement along the X axis
+
 [25] "tBodyGyroStdY"           
+	- Standard deviation of the time based body gyro measurement along the Y axis
+
 [26] "tBodyGyroStdZ"           
+	- Standard deviation of the time based body gyro measurement along the Z axis
+
 [27] "tBodyGyroJerkMeanX"      
+	- Mean value of the time based body gyro jerk measurement along the X axis
+
 [28] "tBodyGyroJerkMeanY"      
+	- Mean value of the time based body gyro jerk measurement along the Y axis
+
 [29] "tBodyGyroJerkMeanZ"      
+	- Mean value of the time based body gyro jerk measurement along the Z axis
+
 [30] "tBodyGyroJerkStdX"       
+	- Standard deviation of the time based body gyro jerk measurement along the X axis
+
 [31] "tBodyGyroJerkStdY"       
-[32] "tBodyGyroJerkStdZ"       
-[33] "tBodyAccMagMean"         
+	- Standard deviation of the time based body gyro jerk measurement along the Y axis
+
+[32] "tBodyGyroJerkStdZ" 
+	- Standard deviation of the time based body gyro jerk measurement along the Z axis
+
+[33] "tBodyAccMagMean"
+	- Mean value of the time based body acceleration magnitude
+
 [34] "tBodyAccMagStd"          
+	- Standard deviation of the time based body acceleration magnitude
+
 [35] "tGravityAccMagMean"      
+	- Mean value of the time based body acceleration magnitude
+
 [36] "tGravityAccMagStd"       
+	- Standard deviation of the time based body acceleration magnitude
 [37] "tBodyAccJerkMagMean"     
+	- Mean value of the time based body acceleration jerk magnitude
+
 [38] "tBodyAccJerkMagStd"      
+	- Standard deviation of the time based body acceleration jerk magnitude
+
 [39] "tBodyGyroMagMean"        
+	- Mean value of the time based gyro measurement magnitude
 [40] "tBodyGyroMagStd"         
+	- Standard deviation of the time based gyro measurement magnitude
+
 [41] "tBodyGyroJerkMagMean"    
-[42] "tBodyGyroJerkMagStd"     
+	- Mean value of the time based gyro jerk measurement magnitude
+
+[42] "tBodyGyroJerkMagStd" 
+	- Standard deviation of the time based gyro jerk measurement magnitude
+
 [43] "fBodyAccMeanX"           
+	- Mean value of the frequency based body acceleration along the X axis
+
 [44] "fBodyAccMeanY"           
+	- Mean value of the frequency based body acceleration along the Y axis
+
 [45] "fBodyAccMeanZ"           
+	- Mean value of the frequency based body acceleration along the Z axis
+
 [46] "fBodyAccStdX"            
+	- Standard deviation of the frequency based body acceleration along the X axis
+
 [47] "fBodyAccStdY"            
+	- Standard deviation of the frequency based body acceleration along the Y axis
+
 [48] "fBodyAccStdZ"            
+	- Standard deviation of the frequency based body acceleration along the Z axis
+
+
 [49] "fBodyAccJerkMeanX"       
+	- Mean value of the frequency based body acceleration jerk along the X axis
+
 [50] "fBodyAccJerkMeanY"       
+	- Mean value of the frequency based body acceleration jerk along the Y axis
+
 [51] "fBodyAccJerkMeanZ"       
+	- Mean value of the frequency based body acceleration jerk along the Z axis
+
 [52] "fBodyAccJerkStdX"        
+	- Standard deviation of the frequency based body acceleration jerk along the X axis
+
 [53] "fBodyAccJerkStdY"        
+	- Standard deviation of the frequency based body acceleration jerk along the Y axis
+
 [54] "fBodyAccJerkStdZ"        
-[55] "fBodyGyroMeanX"          
+	- Standard deviation of the frequency based body acceleration jerk along the Z axis
+
+[55] "fBodyGyroMeanX"
+	- Mean value of the frequency based body gyro measurement along the X axis
+
 [56] "fBodyGyroMeanY"          
+	- Mean value of the frequency based body gyro measurement along the Y axis
+
 [57] "fBodyGyroMeanZ"          
+	- Mean value of the frequency based body gyro measurement along the Z axis
+
 [58] "fBodyGyroStdX"           
+	- Standard deviation of the frequency based body gyro measurement along the X axis
+
 [59] "fBodyGyroStdY"           
+	- Standard deviation of the frequency based body gyro measurement along the Y axis   
+
 [60] "fBodyGyroStdZ"           
+	- Standard deviation of the frequency based body gyro measurement along the Z axis   
+
 [61] "fBodyAccMagMean"         
+	- Mean value of the frequency based body acceleration magnitude
+
 [62] "fBodyAccMagStd"          
+	- Standard deviation of the frequency based body acceleration magnitude
+
 [63] "fBodyBodyAccJerkMagMean" 
+	- Mean value of the frequency based body acceleration jerk magnitude
+
 [64] "fBodyBodyAccJerkMagStd"  
+	- Standard deviation of the frequency based body acceleration jerk magnitude
+
 [65] "fBodyBodyGyroMagMean"    
+	- Mean value of the frequency based gyro measurement magnitude
+
 [66] "fBodyBodyGyroMagStd"     
+	- Standard deviatione of the frequency based gyro measurement magnitude
+
 [67] "fBodyBodyGyroJerkMagMean"
+	- Mean value of the time based gyro jerk measurement magnitude
+
 [68] "fBodyBodyGyroJerkMagStd" 
+	- Standard deviation of the time based gyro jerk measurement magnitude
