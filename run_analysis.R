@@ -26,11 +26,11 @@ colnames(train_sub) <- "subject"
 colnames(act_lbls) <- c("actNo", "activity")
 colnames(features) <- c("featNo", "featDesc")
 
-# Select the colums we want based on -mean and -std in the 
+# Select the column descriptions we want based on -mean and -std in the 
 # feature description
 feat_sel <- features[grep("-mean|-std",features$featDesc),]
 
-# exclude columns with -meanFreq
+# exclude columns descriptions with -meanFreq
 feat_sel <- feat_sel[grep("-meanFreq",feat_sel$featDesc,invert=TRUE),]
 
 # Reformat the feature descriptions to remove "-" and "()"
@@ -45,7 +45,7 @@ col_sel <- feat_sel$featNo
 test_sel <- test_data[,col_sel]
 train_sel <- train_data[,col_sel]
 
-# Name the columns based on the featre description
+# Name the columns based on the featre descriptions
 colnames(test_sel) <- feat_sel$featDesc
 colnames(train_sel) <- feat_sel$featDesc
 
