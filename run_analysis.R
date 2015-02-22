@@ -1,23 +1,22 @@
-setwd("c:/coursera/CleanData")
 library("dplyr")
 
 # get test data
 test_sub <- read.table("./data/test/subject_test.txt", quote="\"")
 test_data <- read.table("./data/test/X_test.txt", quote="\"")
-test_lbls <- read.table("./data/test/y_test.txt", quote="\"")
+test_act <- read.table("./data/test/y_test.txt", quote="\"")
 
 # get train data
 train_sub <- read.table("./data/train/subject_train.txt", quote="\"")
 train_data <- read.table("./data/train/X_train.txt", quote="\"")
-train_lbls <- read.table("./data/train/y_train.txt", quote="\"")
+train_act <- read.table("./data/train/y_train.txt", quote="\"")
 
 # get activity and feature descriptions
 act_lbls <- read.table("./data/activity_labels.txt", quote="\"", stringsAsFactors=FALSE)
 features <- read.table("./data/features.txt", quote="\"", stringsAsFactors=FALSE)
 
 # Name the columns in the y test and train data
-colnames(test_lbls) <- "actNo"
-colnames(train_lbls) <- "actNo"
+colnames(test_act) <- "actNo"
+colnames(train_act) <- "actNo"
 
 # Name the columns in the subject test and train data
 colnames(test_sub) <- "subject"
@@ -51,8 +50,8 @@ colnames(test_sel) <- feat_sel$featDesc
 colnames(train_sel) <- feat_sel$featDesc
 
 # combine x results with subject and activity numbers
-test_bind <- cbind(test_sub, test_lbls, test_sel)
-train_bind <- cbind(train_sub, train_lbls, train_sel)
+test_bind <- cbind(test_sub, test_act, test_sel)
+train_bind <- cbind(train_sub, train_act, train_sel)
 
 # combine test and train data
 all_data <- rbind(test_bind, train_bind)
